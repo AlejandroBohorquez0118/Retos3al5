@@ -75,4 +75,11 @@ public class OrderController {
     public List<Order> ordersSalesManByState(@PathVariable("state") String state, @PathVariable("id") int id) {
         return orderService.ordersSalesManByState(state, id);
     }
+    
+    @GetMapping("/salesman/{id}")
+    public List<Order> getBySalesManId(@PathVariable Integer id){
+    
+    return orderService.ordersSalesManById(id);
+    
+    }
 }
